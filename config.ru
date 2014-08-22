@@ -1,7 +1,7 @@
 # This file is used by Rack-based servers to start the application.
 
 # path to the angular directory
-angular_path = 'frontend/'
+angular_path = 'frontend/app'
 not_found_path = 'public/404.html'
 
 module MyMiddleware

@@ -1,0 +1,15 @@
+{
+  "name": "angular-seed",
+  "description": "Frontend for dakwisep",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "angular-bootstrap": "0.11.x",
+    "bootstrap": "3.2.x"
+  }
+}
