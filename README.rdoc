@@ -1,28 +1,27 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+= dakwisep
+This is a personal project to get familiar with Rails and AngularJS.
+== System dependencies
+Make sure to have <em>Rails</em>, <em>npm</em>, <em>Bundler</em> and <em>foreman</em> installed on your System.
+* npm: <tt>$ apt-get install npm</tt>
+* Rails: <tt>$ gem install rails</tt>
+* Bundler: <tt>$ gem install bundler</tt>
+* Foreman: <tt>$ gem install foreman</tt>
+== Database creation
+You need to have <em>PostgreSQL</em> installed:
+  $ apt-get install postgresql postgresql-client
+Create your Useraccount:
+  $ sudo -u postgres createuser $USER
+A database for development:
+  $ sudo -u postgres createdb -T template0 -l de_DE.utf8 -O $USER dakwisep_dev
+And a database for testing:
+  $ sudo -u postgres createdb -T template0 -l de_DE.utf8 -O $USER dakwisep_test
+== Deployment instructions
+Get this git-repository with:
+  $ git clone https://github.com/krit0n/dakwisep.git
+And download the missing components:
+  $ foreman start setup_rails
+  $ foreman start setup_angular
+To start a server for development create a file delivering the foreman environment variables.
+  $ echo -e "PORT=5000\nRACK_ENV=development" > .env
+Now this command starts the Unicorn server on Port 5000:
+  $ foreman start web
