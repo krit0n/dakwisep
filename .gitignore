@@ -18,6 +18,9 @@
 /log/*.log
 /tmp
 
+# Ignore Foreman environment variables
+.env
+
 # Generic files to ignore
 *~
 *.swp
