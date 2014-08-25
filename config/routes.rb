@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  match '/auth/register', to: 'auth#register', via: 'post'
+  match '/auth/authenticate', to: 'auth#authenticate', via: 'post'
+  match '/auth/token_status', to: 'auth#token_status', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
